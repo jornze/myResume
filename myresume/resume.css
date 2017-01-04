@@ -1,0 +1,101 @@
+/*reset*/
+
+
+/*清零的方法*/
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,
+table,td,img,div,dl,dt,dd,input{margin:0;padding:0;}
+body{font-size:12px;}
+img{border:none;}
+li{list-style:none;}
+input,select,textarea{outline:none;}
+textarea{resize:none;}
+a{text-decoration:none;color:#656565;}
+/*清楚浮动方法*/
+.clearfix:after{content:"";display:block;clear:both;visibility:hidden;}
+.clearfix{
+	zoom:1;
+}
+ 
+ /*头部轮播图*/
+#top-fos{
+  width:100%;
+  height:100%;
+  margin:50px; auto;
+
+}
+#top-fos .fosbox{
+	width:1000px;
+	height:400px;
+	margin:0 auto;
+	overflow:hidden;
+	position:relative;
+}
+#top-fos .fosbox ul{
+	width:4000px;height:400px;
+}
+#top-fos .fosbox ul li{
+	float:left;
+}
+#top-fos .fosbox ul li a{
+	display:block;
+}
+#top-fos .fosbox ul li a img{
+	display:block;width:1000px;height:100%;
+}
+#lrbt span{
+	position:absolute;
+	top:50%;
+	display:block;
+	width: 50px;
+	height:100px;
+	line-height:100px;
+	font-size:30px;
+	color:#ffffff;
+	background-color:#ccc;
+	text-align:center;
+	margin-top:-50px;
+	cursor:pointer;
+	opacity:0.3;
+	transition:all 0.6s;
+}
+#lrbt .pre{left:-20px;border-radius:5px 50px 50px 5px;}
+#lrbt .next{right:-20px;border-radius:50px 5px 5px 50px;}
+.fosbox:hover #lrbt span{opacity:0.9;}
+.fosbox:hover #lrbt .pre {transform:translate(10px,0);}
+.fosbox:hover #lrbt .next {transform:translate(-10px,0);}
+#btindex{
+	position:absolute;bottom:50px;left:50%;
+	margin-left:-50px;width:100px;height:10px;
+}
+#btindex span{
+	display:inline-block;
+	width:10px;
+	height:10px;
+	border-radius:5px;
+	background-color:#ffffff;
+	margin:0 5px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
