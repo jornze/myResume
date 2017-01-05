@@ -71,7 +71,7 @@ window.onload=function(){
     	var tt=function(){
     		alert("ff");
     	}*/
-alert("jj")
+	alert("dff")
 }
 
 
