@@ -71,7 +71,140 @@ window.onload=function(){
     	var tt=function(){
     		alert("ff");
     	}*/
-	alert("dff")
+	 var main=document.getElementById("fsbox"),
+            pic=document.getElementById("ulb"),
+            lis=pic.getElementsByTagName("li"),
+            imgs=pic.getElementsByTagName('img'),
+            prev=document.getElementById("pre"),
+            next=document.getElementById("next"),
+            span=document.getElementById("btindex").getElementsByTagName("span"),
+            index=1,
+            animated=false,
+            timer=null,
+            main3=document.getElementById("main3"),
+            main3w=main3.offsetWidth,
+            offW=main.offsetWidth,
+            ulbw=ulb.style.width=offW*6+'px';
+            ulb.style.left=-offW+'px';
+            for(var i=0;i<lis.length;i++){
+                lis[i].style.width=offW+'px';
+                imgs[i].style.width=offW+'px';
+            }
+            function showcol(){
+                for (var i = 0; i < span.length; i++) {
+                    if(span[i].className=="active"){
+                        span[i].className="";
+                        break;
+                    }
+                };
+                span[index-1].className="active"; 
+            }
+            function animate(offset){
+                 if (offset == 0) {
+                    return;
+                }
+                    animated=true;
+                    var newleft=parseInt(pic.style.left)+offset;
+                    var time=250;
+                    var interval=10;
+                    var speed=offset/(time/interval);
+                    function go(){
+                            if(speed<0 && parseInt(pic.style.left)>newleft ||speed>0 && parseInt(pic.style.left)<newleft){
+                                pic.style.left=parseInt(pic.style.left)+speed+"px";
+                                setTimeout(go,interval);
+                            }
+                        else{
+                            animated=false;
+                            pic.style.left=newleft+"px";
+                             if(newleft<-offW*4){
+                                  pic.style.left=-offW+"px";
+                                }
+                              if(newleft>-offW){
+                                 pic.style.left=-offW*4+"px"; 
+                                 }
+                            }
+                    }
+                    go();
+            }
+             function play() {
+                timer = setTimeout(function () {
+                    next.onclick();
+                    play();
+                }, 3000);
+            }
+            function stop(){
+                clearTimeout(timer);
+            }
+            next.onclick=function(){
+                if(animated==true/*!animated*/){
+                    return;
+                } 
+                if(index==4){
+                    index=1;
+                }
+                else{
+                    index+=1; 
+                }
+                 animate(-offW);
+                 showcol();
+            }
+            prev.onclick=function(){
+                  if(animated==true/*!animated*/){
+                    return;
+                } 
+                 if(index==1){
+                    index=4;
+                }
+                else{
+                    index-=1; 
+                }
+                animate(offW);
+                showcol();
+            }
+         for (var i = 0; i < span.length; i++) {
+                span[i].onclick=function(){
+                     if (animated==true) {
+                        return;
+                    }
+                    if(this.className == 'active') {
+                        return;
+                    }
+                    var myindex=parseInt(this.getAttribute("index"));
+                    var offset=-offW*(myindex-index);
+                    animate(offset);
+                    index=myindex;
+                    showcol();
+                }
+            };  
+        main.onmouseover=stop;
+        main.onmouseout=play;
+        play();
+        //基本资料
+        var  bsid=document.getElementById("bsid"),
+             ipts=bsid.getElementsByTagName("input"), 
+        edt=document.getElementById("edit");
+   var lirbox=document.getElementById("lirbox"),
+       lirs=lirbox.getElementsByTagName("div"),
+       spans=lirbox.getElementsByTagName("span"),
+       ps=lirbox.getElementsByTagName('p'),
+   leg=lirs.length;
+   for(var i=0;i<leg;i++){
+    lirs[i].style.transform="rotate("+i*360/leg+"deg)";
+    lirs[i].style.transformOrigin="-50px 50px";
+    spans[i].style.transform="rotate("+(-i*360/leg)+"deg)";
+    ps[i].style.transform="rotate("+(-i*360/leg)+"deg)";
+    ps[i].onmouseover=function(){
+        this.style.backgroundColor="green";
+        this.style.color="#fff";
+        this.style.fontSize="1.2em";
+    }
+    ps[i].onmouseout=function(){
+        this.style.backgroundColor="";
+        this.style.color="#000";
+         this.style.fontSize="1em";
+    }
+   }
+  
 }
 
 
