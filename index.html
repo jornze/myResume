@@ -19,13 +19,90 @@
 				<span class="next">&gt;</span>
 			</div>
 			<div id="btindex">
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
+                                <span class="active" index="1"></span>
+				<span index="2"></span>
+				<span index="3"></span>
+				<span index="4"></span>
 			</div>
 		</div>
 	</div>
+	<div id="bs">
+		<ul class="bsul" id="bsid">
+			<div class="me">
+				<a href="">
+					<img src="">
+				</a></a>
+			</div>
+			<li><label for="name">姓名:</label><input type="text" placeholder="王子强"></li>
+			<li><label for="age">年龄:</label><input type="text"placeholder="25"></li>
+			<li><label for="place">籍贯:</label><input type="text"placeholder="安徽宿州"></li>
+			<li><label for="hobby">爱好:</label><input type="text"placeholder="运动"></li>
+			<li><label for="marr">婚姻状况:</label><input type="text"placeholder="未婚"></li>
+			<li><label for="phone">电话:</label><input type="text"placeholder="13326132851"></li>
+			<li><label for="email">邮箱:</label><input type="text"placeholder="740990616@qq.com"></li>
+		</ul>
+	</div>
+	<div id="main3">
+	    <div id="lirbox">
+			<div class="lir">
+				<i></i>
+				<span style="background-color:#eeeddd;">1</span>
+				<p class="pp">熟练应用html、css</p>
+			</div>
+			<div class="lir">
+				<i></i>
+				<span style="background-color:#f10;">2</span>
+				<p class="pp">可以用js实现常用的各种业务逻辑</p>
+			</div>
+			<div class="lir">
+				<i></i>
+				<span style="background-color:#dee;">3</span>
+				<p class="pp">对jquery操作很明确</p>
+			</div>
+			<div class="lir">
+				<i></i>
+				<span style="background-color:green;">4</span>
+				<p class="pp">研究过Angularjs</p>
+			</div>
+			<div class="lir">
+				<i></i>
+				<span style="background-color:#ccc;">5</span>
+				<p class="pp">熟悉Nodejs基本的语法</p>
+			</div>
+			<div class="lir">
+				<i></i>
+				<span style="background-color:#f40;">6</span>
+				<p class="pp">熟悉html5 css3新增属性</p>
+			</div>
+			<div class="lir">
+				<i></i>
+				<span style="background-color:#eef;">7</span>
+				<p class="pp">熟悉DIV + CSS布局</p>
+			</div>
+			<div class="lir">
+				<i></i>
+				<span style="background-color:#0dd;">8</span>
+				<p class="pp">熟练实用  Sublime</p>
+			</div>
+		</div>
+		<div style="width:150px;height:150px;color:red;text-align:right" id="hoverclock" onclick="return false"></div>
+	</div>
 	<script type="text/javascript" src="./myresume/resumejs.js"></script>
+	<script src="http://hovertree.com/texiao/hoverclock/jquery.hoverclock.2.1.0.js"></script>
+	 <script>
+        $("#hoverclock").hoverclock({
+            "h_width": 150,
+            "h_height": 150,
+            //"h_hourNumSize": "80",
+            // "h_hourNumRadii": "200",
+            // "h_hourNumShow": false,
+            // "h_minuteNumShow":false,
+            "h_hourNumColor": "deeppink",
+            "h_backColor": "yellow",
+            // "h_borderColor": "gold",
+            //"h_frontColor":"red",
+            "h_linkText": "子强"
+        });
+    </script>
 </body>
 </html>
