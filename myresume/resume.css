@@ -17,30 +17,31 @@ a{text-decoration:none;color:#656565;}
 }
  
  /*头部轮播图*/
+ #btindex .active{background-color:#f40;}
 #top-fos{
   width:100%;
-  height:100%;
-  margin:50px; auto;
+  height:400px;
+  margin:10px auto;
+  overflow:hidden;
 
 }
 #top-fos .fosbox{
-	width:1000px;
+	width:100%;
 	height:400px;
-	margin:0 auto;
 	overflow:hidden;
 	position:relative;
 }
-#top-fos .fosbox ul{
-	width:4000px;height:400px;
+#top-fos .fosbox ul {
+	height:400px;position:absolute;
 }
 #top-fos .fosbox ul li{
-	float:left;
+	float:left;width:100%;
 }
 #top-fos .fosbox ul li a{
 	display:block;
 }
 #top-fos .fosbox ul li a img{
-	display:block;width:1000px;height:100%;
+	display:block;height:400px;width:100%;
 }
 #lrbt span{
 	position:absolute;
@@ -58,6 +59,7 @@ a{text-decoration:none;color:#656565;}
 	opacity:0.3;
 	transition:all 0.6s;
 }
+#lrbt span:hover{color:#f40;font-size:38px;}
 #lrbt .pre{left:-20px;border-radius:5px 50px 50px 5px;}
 #lrbt .next{right:-20px;border-radius:50px 5px 5px 50px;}
 .fosbox:hover #lrbt span{opacity:0.9;}
@@ -76,7 +78,101 @@ a{text-decoration:none;color:#656565;}
 	margin:0 5px;
 
 }
-
+#bs{
+	font-size:20px;
+	color:#fff;
+	position:relative;
+	width:100%;
+	height:600px;
+	margin: 0 auto;
+	background-image:url(../myresume/images/main.jpg);
+}
+#bs input{
+	background-color:transparent;
+	border:none;
+	font-weight:bold;
+	font-size:20px;
+	width:170px;
+	height:40px;
+	line-height:40px;
+	padding-left:10px;
+	margin-left:20px;
+}
+#bs ::-webkit-input-placeholder{color:#f00;}
+#bs ::-moz-placeholder{color:#f00;}
+#bs :-moz-placeholder{color:#f00;}
+#bs .bsul{
+	position: absolute;
+	left:200px;
+	top:200px;
+	width:300px;
+	height:auto;
+}
+#bs .bsul li{
+	width:300px;
+	height:40px;line-height:40px;
+	text-align:center;
+}
+#bs .bsul li label{
+	width:100px;
+    text-align:right;
+    display:inline-block;
+}
+#main3{position:relative;width:100%;height:auto;}
+#lirbox{
+	position:absolute;width:400px;
+	height:400px;left:50%;top:50%;
+	margin-top:0px;margin-left:-200px;
+}
+.lir{
+	width:150px;
+	height:100px;
+	position:absolute;
+	left:250px;
+	top:250px;
+	cursor:pointer;
+}
+.lir i{
+	display:inline-block;
+    width:40px;
+    height:1px;
+    border-bottom:1px dashed #f40;
+    margin-right:-5px;
+    margin-top:-1px;
+    line-height:100px;
+}
+.lir span{
+	display:inline-block;
+	width:100px;
+	height:100px;
+	border:1px solid #f20;  
+	box-sizing:border-box;
+	border-radius:75px;
+	text-align:center;
+	position:relative;
+	line-height:100px;
+	z-index:1;
+}
+.lir .pp{
+	position:absolute;
+    left:50%;top:40%;
+    margin-left:-25px;
+    margin-top:-30px;
+    width:60px;
+    height:60px;
+    padding:10px;
+    line-height:17px;
+    border-radius:40px;
+    border:1px solid #fff;
+    z-index:2;
+    background-color: #fff;
+}
+#hoverclock{
+	position:absolute;
+    left:50%;
+    top:50%;
+    margin-left:-75px;margin-top:225px;
+}
 
 
 
